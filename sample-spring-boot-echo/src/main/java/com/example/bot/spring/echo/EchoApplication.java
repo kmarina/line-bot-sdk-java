@@ -45,16 +45,19 @@ public class EchoApplication {
     }
     @EventMapping
 public Message handleStickerMessage(MessageEvent<StickerMessageContent> event) {
+     System.out.println("event: " + event);
     return new TextMessage("スタンプ送信ありがとうございます！");
 }
     
 @EventMapping
 public Message handleImageMessage(MessageEvent<ImageMessageContent> event) {
+     System.out.println("event: " + event);
     return new TextMessage("画像送信ありがとうございます！");
 }
     
 @EventMapping
 public Message handleVideoMessage(MessageEvent<VideoMessageContent> event) {
+     System.out.println("event: " + event);
     return new TextMessage("動画送信ありがとうございます！");
 }
     
